@@ -14,7 +14,7 @@ public protocol Router: ObservableObject {
 
 public class HomeRouter: Router {
     
-    @Published var navigationPath = NavigationPath()
+    @Published var navigationPath: [MyNavigationPath] = []
     
     public func navigate(to path: MyNavigationPath) {
         MyNavigationPath.setCurrentRouter(self)
@@ -23,13 +23,13 @@ public class HomeRouter: Router {
     
     public func popToRoot() {
         MyNavigationPath.setCurrentRouter(self)
-        navigationPath = NavigationPath()
+        navigationPath.removeAll()
     }
 }
 
 public class ProfileRouter: Router {
     
-    @Published var navigationPath = NavigationPath()
+    @Published var navigationPath: [MyNavigationPath] = []
     
     public func navigate(to path: MyNavigationPath) {
         MyNavigationPath.setCurrentRouter(self)
@@ -38,7 +38,7 @@ public class ProfileRouter: Router {
     
     public func popToRoot() {
         MyNavigationPath.setCurrentRouter(self)
-        navigationPath = NavigationPath()
+        navigationPath.removeAll()
     }
 }
 
@@ -46,12 +46,13 @@ public enum MyNavigationPath: Hashable {
     case personDetail(Person)
     case searchView
     
-    var associatedView: AnyView {
+    @ViewBuilder
+    var associatedView: some View {
         switch self {
         case .personDetail(let person):
-            return AnyView(PersonDetailView(router: MyNavigationPath.currentRouter, person: person))
+            PersonDetailView(router: MyNavigationPath.currentRouter, person: person)
         case .searchView:
-            return AnyView(SearchView(router: MyNavigationPath.currentRouter))
+            SearchView(router: MyNavigationPath.currentRouter)
         }
     }
     
