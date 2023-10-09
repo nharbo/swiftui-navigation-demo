@@ -7,31 +7,17 @@
 
 import SwiftUI
 
-public protocol Router: ObservableObject {
-    var navigationPath: [MyNavigationPath] { get set }
-    
-    func navigate(to path: MyNavigationPath)
-    func popToRoot()
-}
+public final class Router: ObservableObject {
+    @Published public var navigationPath: [MyNavigationPath] = []
 
-extension Router {
+
     public func navigate(to path: MyNavigationPath) {
-        MyNavigationPath.setCurrentRouter(self)
         navigationPath.append(path)
     }
     
     public func popToRoot() {
-        MyNavigationPath.setCurrentRouter(self)
         navigationPath.removeAll()
     }
-}
-
-public class HomeRouter: Router {
-    @Published public var navigationPath: [MyNavigationPath] = []
-}
-
-public class ProfileRouter: Router {
-    @Published public var navigationPath: [MyNavigationPath] = []
 }
 
 public enum MyNavigationPath: Hashable {
@@ -41,15 +27,10 @@ public enum MyNavigationPath: Hashable {
     @ViewBuilder
     var associatedView: some View {
         switch self {
-        case .personDetail(let person):
-            PersonDetailView(router: MyNavigationPath.currentRouter, person: person)
+        case let .personDetail(person):
+            PersonDetailView(person: person)
         case .searchView:
-            SearchView(router: MyNavigationPath.currentRouter)
+            SearchView()
         }
-    }
-    
-    static var currentRouter: any Router = HomeRouter()
-    static func setCurrentRouter(_ router: any Router) {
-        MyNavigationPath.currentRouter = router
     }
 }

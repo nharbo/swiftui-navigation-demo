@@ -9,16 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @StateObject private var homeRouter = HomeRouter()
-    @StateObject private var profileRouter = ProfileRouter()
+    @StateObject private var homeRouter = Router()
+    @StateObject private var profileRouter = Router()
     
     var body: some View {
         TabView {
             NavigationStack(path: $homeRouter.navigationPath) {
                 HomeView()
-                    .navigationDestination(for: MyNavigationPath.self) { path in
-                        path.associatedView
-                    }
+                    .setupRouter()
             }
             .environmentObject(homeRouter)
             .tabItem {
@@ -31,9 +29,7 @@ struct ContentView: View {
             
             NavigationStack(path: $profileRouter.navigationPath) {
                 ProfileView()
-                    .navigationDestination(for: MyNavigationPath.self) { path in
-                        path.associatedView
-                    }
+                    .setupRouter()
             }
             .environmentObject(profileRouter)
             .tabItem {
@@ -43,6 +39,14 @@ struct ContentView: View {
                     Image(systemName: "person")
                 }
             }
+        }
+    }
+}
+
+extension View {
+    func setupRouter() -> some View {
+        navigationDestination(for: MyNavigationPath.self) { path in
+            path.associatedView
         }
     }
 }

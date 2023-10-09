@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var router: HomeRouter
+    @EnvironmentObject var router: Router
     
     var body: some View {
         Text("Home")

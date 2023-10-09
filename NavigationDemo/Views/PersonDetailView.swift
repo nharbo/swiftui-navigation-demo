@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PersonDetailView: View {
-    var router: any Router
+    @EnvironmentObject var router: Router
     
     let person: Person
     
@@ -21,5 +21,5 @@ struct PersonDetailView: View {
 }
 
 #Preview {
-    PersonDetailView(router: HomeRouter(), person: Person(name: "nico"))
+    PersonDetailView(person: Person(name: "nico"))
 }

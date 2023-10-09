@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchView: View {
-    var router: any Router
+    @EnvironmentObject var router: Router
     
     var body: some View {
         Text("Search")
@@ -19,5 +19,5 @@ struct SearchView: View {
 }
 
 #Preview {
-    SearchView(router: HomeRouter())
+    SearchView()
 }
