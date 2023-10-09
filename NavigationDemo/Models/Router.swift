@@ -8,14 +8,13 @@
 import SwiftUI
 
 public protocol Router: ObservableObject {
+    var navigationPath: [MyNavigationPath] { get set }
+    
     func navigate(to path: MyNavigationPath)
     func popToRoot()
 }
 
-public class HomeRouter: Router {
-    
-    @Published var navigationPath: [MyNavigationPath] = []
-    
+extension Router {
     public func navigate(to path: MyNavigationPath) {
         MyNavigationPath.setCurrentRouter(self)
         navigationPath.append(path)
@@ -27,19 +26,12 @@ public class HomeRouter: Router {
     }
 }
 
+public class HomeRouter: Router {
+    @Published public var navigationPath: [MyNavigationPath] = []
+}
+
 public class ProfileRouter: Router {
-    
-    @Published var navigationPath: [MyNavigationPath] = []
-    
-    public func navigate(to path: MyNavigationPath) {
-        MyNavigationPath.setCurrentRouter(self)
-        navigationPath.append(path)
-    }
-    
-    public func popToRoot() {
-        MyNavigationPath.setCurrentRouter(self)
-        navigationPath.removeAll()
-    }
+    @Published public var navigationPath: [MyNavigationPath] = []
 }
 
 public enum MyNavigationPath: Hashable {
