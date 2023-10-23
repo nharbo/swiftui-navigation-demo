@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import navigation
+import package_one
+import package_two
 
 struct ContentView: View {
     var body: some View {
