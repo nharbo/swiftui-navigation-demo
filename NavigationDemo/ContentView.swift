@@ -8,17 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @StateObject private var homeRouter = Router()
-    @StateObject private var profileRouter = Router()
-    
     var body: some View {
         TabView {
-            NavigationStack(path: $homeRouter.navigationPath) {
+            // Home
+            RouterRootView {
                 HomeView()
-                    .setupRouter()
             }
-            .environmentObject(homeRouter)
             .tabItem {
                 Label {
                     Text("Home")
@@ -27,11 +22,10 @@ struct ContentView: View {
                 }
             }
             
-            NavigationStack(path: $profileRouter.navigationPath) {
+            // Profile
+            RouterRootView {
                 ProfileView()
-                    .setupRouter()
             }
-            .environmentObject(profileRouter)
             .tabItem {
                 Label {
                     Text("Profile")
@@ -39,14 +33,6 @@ struct ContentView: View {
                     Image(systemName: "person")
                 }
             }
-        }
-    }
-}
-
-extension View {
-    func setupRouter() -> some View {
-        navigationDestination(for: MyNavigationPath.self) { path in
-            path.associatedView
         }
     }
 }

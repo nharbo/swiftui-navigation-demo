@@ -11,9 +11,16 @@ struct ProfileView: View {
     @EnvironmentObject var router: Router
     
     var body: some View {
-        Text("Profile")
-        Button("Go to search") {
-            router.navigate(to: .searchView)
+        VStack {
+            Text("Profile")
+            Button("Go to search") {
+                router.navigate(to: .searchView)
+            }
+        }
+        .sheet(item: $router.sheet) { sheetPath in
+            RouterRootView {
+                sheetPath.associatedView
+            }
         }
     }
 }

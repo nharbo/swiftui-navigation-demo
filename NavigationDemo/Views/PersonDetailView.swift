@@ -13,9 +13,22 @@ struct PersonDetailView: View {
     let person: Person
     
     var body: some View {
-        Text("Person details for \(person.name)")
-        Button("Pop to root") {
-            router.popToRoot()
+        VStack {
+            Text("Person details for \(person.name)")
+            Button("Pop to root") {
+                router.popToRoot()
+            }
+            Button("Go to search as sheet") {
+                router.present(sheet: .searchView)
+            }
+            Button("Dismiss modal") {
+                router.dismissSheet()
+            }
+        }
+        .sheet(item: $router.sheet) { sheetPath in
+            RouterRootView {
+                sheetPath.associatedView
+            }
         }
     }
 }

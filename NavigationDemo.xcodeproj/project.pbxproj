@@ -20,6 +20,9 @@
 		100CE5102AD0A8A500B15748 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE50F2AD0A8A500B15748 /* SearchView.swift */; };
 		100CE5132AD0A8B500B15748 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE5122AD0A8B500B15748 /* Person.swift */; };
 		100CE5152AD0A8C800B15748 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE5142AD0A8C800B15748 /* Router.swift */; };
+		100CE51D2AD4265400B15748 /* View+Routing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE51C2AD4265400B15748 /* View+Routing.swift */; };
+		100CE5202AD4281100B15748 /* SheetWithNavigationStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE51F2AD4281100B15748 /* SheetWithNavigationStackModifier.swift */; };
+		100CE5222AD433C500B15748 /* RouterRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE5212AD433C500B15748 /* RouterRootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		100CE50F2AD0A8A500B15748 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		100CE5122AD0A8B500B15748 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		100CE5142AD0A8C800B15748 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		100CE51C2AD4265400B15748 /* View+Routing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Routing.swift"; sourceTree = "<group>"; };
+		100CE51F2AD4281100B15748 /* SheetWithNavigationStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetWithNavigationStackModifier.swift; sourceTree = "<group>"; };
+		100CE5212AD433C500B15748 /* RouterRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterRootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,7 @@
 		100CE4DA2AD0A7CC00B15748 /* NavigationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				100CE51A2AD4263D00B15748 /* Routing */,
 				100CE5112AD0A8A900B15748 /* Models */,
 				100CE5062AD0A83C00B15748 /* Views */,
 				100CE4DB2AD0A7CC00B15748 /* NavigationDemoApp.swift */,
@@ -158,9 +165,35 @@
 			isa = PBXGroup;
 			children = (
 				100CE5122AD0A8B500B15748 /* Person.swift */,
-				100CE5142AD0A8C800B15748 /* Router.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		100CE51A2AD4263D00B15748 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				100CE51E2AD427EC00B15748 /* Views */,
+				100CE5142AD0A8C800B15748 /* Router.swift */,
+				100CE51B2AD4264100B15748 /* Extensions */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
+		100CE51B2AD4264100B15748 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				100CE51C2AD4265400B15748 /* View+Routing.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		100CE51E2AD427EC00B15748 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				100CE51F2AD4281100B15748 /* SheetWithNavigationStackModifier.swift */,
+				100CE5212AD433C500B15748 /* RouterRootView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,10 +330,13 @@
 				100CE5082AD0A84A00B15748 /* HomeView.swift in Sources */,
 				100CE5102AD0A8A500B15748 /* SearchView.swift in Sources */,
 				100CE5152AD0A8C800B15748 /* Router.swift in Sources */,
+				100CE51D2AD4265400B15748 /* View+Routing.swift in Sources */,
 				100CE4DE2AD0A7CC00B15748 /* ContentView.swift in Sources */,
 				100CE50E2AD0A87600B15748 /* PersonDetailView.swift in Sources */,
 				100CE5132AD0A8B500B15748 /* Person.swift in Sources */,
 				100CE4DC2AD0A7CC00B15748 /* NavigationDemoApp.swift in Sources */,
+				100CE5222AD433C500B15748 /* RouterRootView.swift in Sources */,
+				100CE5202AD4281100B15748 /* SheetWithNavigationStackModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
