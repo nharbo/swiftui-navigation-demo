@@ -7,7 +7,7 @@
 
 import SwiftUI
 import PackageOne
-import packageTwo
+import PackageTwo
 
 struct ContentView: View {
     var body: some View {
