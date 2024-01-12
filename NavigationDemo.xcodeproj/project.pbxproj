@@ -14,9 +14,9 @@
 		100CE4EE2AD0A7D000B15748 /* NavigationDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE4ED2AD0A7D000B15748 /* NavigationDemoTests.swift */; };
 		100CE4F82AD0A7D000B15748 /* NavigationDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE4F72AD0A7D000B15748 /* NavigationDemoUITests.swift */; };
 		100CE4FA2AD0A7D000B15748 /* NavigationDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE4F92AD0A7D000B15748 /* NavigationDemoUITestsLaunchTests.swift */; };
-		104AEB832AE6ACF400B268C8 /* navigation in Frameworks */ = {isa = PBXBuildFile; productRef = 104AEB822AE6ACF400B268C8 /* navigation */; };
-		104AEB852AE6ACF400B268C8 /* package-one in Frameworks */ = {isa = PBXBuildFile; productRef = 104AEB842AE6ACF400B268C8 /* package-one */; };
-		104AEB872AE6ACF400B268C8 /* package-two in Frameworks */ = {isa = PBXBuildFile; productRef = 104AEB862AE6ACF400B268C8 /* package-two */; };
+		100D31AB2B51609D002652E9 /* packageTwo in Frameworks */ = {isa = PBXBuildFile; productRef = 100D31AA2B51609D002652E9 /* packageTwo */; };
+		100D31AD2B5160A1002652E9 /* models in Frameworks */ = {isa = PBXBuildFile; productRef = 100D31AC2B5160A1002652E9 /* models */; };
+		100D31AF2B516310002652E9 /* PackageOne in Frameworks */ = {isa = PBXBuildFile; productRef = 100D31AE2B516310002652E9 /* PackageOne */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,10 +48,10 @@
 		100CE4F32AD0A7D000B15748 /* NavigationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NavigationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		100CE4F72AD0A7D000B15748 /* NavigationDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemoUITests.swift; sourceTree = "<group>"; };
 		100CE4F92AD0A7D000B15748 /* NavigationDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		104AEB7E2AE6ABB800B268C8 /* package-one */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "package-one"; path = "../../trifork/falcon-ios/package-one"; sourceTree = "<group>"; };
-		104AEB7F2AE6ABCF00B268C8 /* package-two */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "package-two"; path = "../../trifork/falcon-ios/package-two"; sourceTree = "<group>"; };
-		104AEB802AE6AC0100B268C8 /* navigation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = navigation; path = "../../trifork/falcon-ios/navigation"; sourceTree = "<group>"; };
-		104AEB882AE6B05400B268C8 /* models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = models; path = "../../trifork/falcon-ios/models"; sourceTree = "<group>"; };
+		100D31A42B515D53002652E9 /* models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = models; sourceTree = "<group>"; };
+		100D31A62B515F0E002652E9 /* packageOne */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = packageOne; sourceTree = "<group>"; };
+		100D31A72B515F3C002652E9 /* packageTwo */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = packageTwo; sourceTree = "<group>"; };
+		10874A872B516423008E80C1 /* navigation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = navigation; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				104AEB852AE6ACF400B268C8 /* package-one in Frameworks */,
-				104AEB832AE6ACF400B268C8 /* navigation in Frameworks */,
-				104AEB872AE6ACF400B268C8 /* package-two in Frameworks */,
+				100D31AF2B516310002652E9 /* PackageOne in Frameworks */,
+				100D31AB2B51609D002652E9 /* packageTwo in Frameworks */,
+				100D31AD2B5160A1002652E9 /* models in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,10 +85,10 @@
 		100CE4CF2AD0A7CC00B15748 = {
 			isa = PBXGroup;
 			children = (
-				104AEB882AE6B05400B268C8 /* models */,
-				104AEB802AE6AC0100B268C8 /* navigation */,
-				104AEB7F2AE6ABCF00B268C8 /* package-two */,
-				104AEB7E2AE6ABB800B268C8 /* package-one */,
+				10874A872B516423008E80C1 /* navigation */,
+				100D31A42B515D53002652E9 /* models */,
+				100D31A62B515F0E002652E9 /* packageOne */,
+				100D31A72B515F3C002652E9 /* packageTwo */,
 				100CE4DA2AD0A7CC00B15748 /* NavigationDemo */,
 				100CE4EC2AD0A7D000B15748 /* NavigationDemoTests */,
 				100CE4F62AD0A7D000B15748 /* NavigationDemoUITests */,
@@ -110,8 +110,6 @@
 		100CE4DA2AD0A7CC00B15748 /* NavigationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				100CE5112AD0A8A900B15748 /* Models */,
-				100CE5062AD0A83C00B15748 /* Views */,
 				100CE4DB2AD0A7CC00B15748 /* NavigationDemoApp.swift */,
 				100CE4DD2AD0A7CC00B15748 /* ContentView.swift */,
 				100CE4DF2AD0A7CF00B15748 /* Assets.xcassets */,
@@ -146,20 +144,6 @@
 			path = NavigationDemoUITests;
 			sourceTree = "<group>";
 		};
-		100CE5062AD0A83C00B15748 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		100CE5112AD0A8A900B15748 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		104AEB812AE6ACF400B268C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,9 +168,9 @@
 			);
 			name = NavigationDemo;
 			packageProductDependencies = (
-				104AEB822AE6ACF400B268C8 /* navigation */,
-				104AEB842AE6ACF400B268C8 /* package-one */,
-				104AEB862AE6ACF400B268C8 /* package-two */,
+				100D31AA2B51609D002652E9 /* packageTwo */,
+				100D31AC2B5160A1002652E9 /* models */,
+				100D31AE2B516310002652E9 /* PackageOne */,
 			);
 			productName = NavigationDemo;
 			productReference = 100CE4D82AD0A7CC00B15748 /* NavigationDemo.app */;
@@ -666,17 +650,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		104AEB822AE6ACF400B268C8 /* navigation */ = {
+		100D31AA2B51609D002652E9 /* packageTwo */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = navigation;
+			productName = packageTwo;
 		};
-		104AEB842AE6ACF400B268C8 /* package-one */ = {
+		100D31AC2B5160A1002652E9 /* models */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = "package-one";
+			productName = models;
 		};
-		104AEB862AE6ACF400B268C8 /* package-two */ = {
+		100D31AE2B516310002652E9 /* PackageOne */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = "package-two";
+			productName = PackageOne;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
