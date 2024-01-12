@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Navigation
 import PackageOne
 import PackageTwo
 
@@ -13,9 +14,9 @@ struct ContentView: View {
     var body: some View {
         TabView {
             // Home
-//            RouterRootView {
+            RouterRootView {
                 HomeView()
-//            }
+            }
             .tabItem {
                 Label {
                     Text("Home")
@@ -25,9 +26,9 @@ struct ContentView: View {
             }
             
             // Profile
-//            RouterRootView {
+            RouterRootView {
                 ProfileView()
-//            }
+            }
             .tabItem {
                 Label {
                     Text("Profile")
@@ -39,6 +40,6 @@ struct ContentView: View {
     }
 }
 
-//#Preview {
-//    ContentView()
-//}
+#Preview {
+    ContentView()
+}

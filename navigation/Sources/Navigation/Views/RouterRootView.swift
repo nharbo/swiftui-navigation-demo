@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RouterRootView<Content: View>: View {
+public struct RouterRootView<Content: View>: View {
     @StateObject private var router = Router()
     
     private let content: () -> Content
@@ -18,7 +18,7 @@ struct RouterRootView<Content: View>: View {
         self.content = content
     }
     
-    var body: some View {
+    public var body: some View {
         NavigationStack(path: $router.navigationPath) {
             content()
                 .setupRouter()

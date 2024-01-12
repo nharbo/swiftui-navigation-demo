@@ -87,8 +87,8 @@
 		100CE4CF2AD0A7CC00B15748 = {
 			isa = PBXGroup;
 			children = (
-				10874A872B516423008E80C1 /* navigation */,
 				100D31A42B515D53002652E9 /* models */,
+				10874A872B516423008E80C1 /* navigation */,
 				100D31A62B515F0E002652E9 /* packageOne */,
 				100D31A72B515F3C002652E9 /* packageTwo */,
 				100CE4DA2AD0A7CC00B15748 /* NavigationDemo */,

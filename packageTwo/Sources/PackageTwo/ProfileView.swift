@@ -6,24 +6,25 @@
 //
 
 import SwiftUI
+import Navigation
 
 public struct ProfileView: View {
-//    @EnvironmentObject var router: Router
+    @EnvironmentObject var router: Router
     
     public init() {}
     
     public var body: some View {
         VStack {
-//            Text("Profile")
-//            Button("Go to search") {
-//                router.navigate(to: .searchView)
-//            }
+            Text("Profile")
+            Button("Go to search") {
+                router.navigate(to: .searchView)
+            }
         }
-//        .sheet(item: $router.sheet) { sheetPath in
-//            RouterRootView {
-//                sheetPath.associatedView
-//            }
-//        }
+        .sheet(item: $router.sheet) { sheetPath in
+            RouterRootView {
+                sheetPath.associatedView
+            }
+        }
     }
 }
 

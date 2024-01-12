@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Models
 
 public final class Router: ObservableObject {
     @Published public var navigationPath: [MyNavigationPath] = []
@@ -35,14 +36,14 @@ extension Router {
 public enum MyNavigationPath: Hashable, Identifiable {
     case homeView
     case profileView
-//    case personDetail(Person)
+    case personDetail(Person)
     case searchView
     case emptyView
     
     public var id: String { String(reflecting: self) }
     
     @ViewBuilder
-    var associatedView: some View {
+    public var associatedView: some View {
         switch self {
         case .homeView:
 //            HomeView()
@@ -50,9 +51,9 @@ public enum MyNavigationPath: Hashable, Identifiable {
         case .profileView:
 //            ProfileView()
             EmptyView()
-//        case let .personDetail(person):
+        case let .personDetail(person):
 //            PersonDetailView(person: person)
-//            EmptyView()
+            EmptyView()
         case .searchView:
 //            SearchView()
             EmptyView()
