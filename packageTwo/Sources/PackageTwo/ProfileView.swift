@@ -17,14 +17,14 @@ public struct ProfileView: View {
         VStack {
             Text("Profile")
             Button("Go to search") {
-                router.navigate(to: .searchView)
+                router.navigate(to: NavigationPath(.searchView))
             }
         }
-        .sheet(item: $router.sheet) { sheetPath in
-            RouterRootView {
-                sheetPath.associatedView
-            }
-        }
+//        .sheet(item: $router.sheet) { sheetPath in
+//            RouterRootView(navigatable: PackageTwoNavigationPath.Self) {
+//                sheetPath.associatedView
+//            }
+//        }
     }
 }
 

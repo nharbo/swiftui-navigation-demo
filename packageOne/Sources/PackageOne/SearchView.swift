@@ -9,27 +9,29 @@ import SwiftUI
 import Navigation
 import Models
 
-struct SearchView: View {
+public struct SearchView: View {
     @EnvironmentObject var router: Router
     
-    var body: some View {
+    public init() { }
+    
+    public var body: some View {
         VStack {
             Text("Search")
             Button("Go to user") {
-                router.navigate(to: .personDetail(Person(name: "Lars")))
+                router.navigate(to: NavigationPath(.personDetail(Person(name: "Lars"))))
             }
-            Button("Go to user as sheet") {
-                router.present(sheet: .personDetail(Person(name: "Lars")))
-            }
-            Button("Dismiss modal") {
-                router.dismissSheet()
-            }
+//            Button("Go to user as sheet") {
+//                router.present(sheet: .personDetail(Person(name: "Lars")))
+//            }
+//            Button("Dismiss modal") {
+//                router.dismissSheet()
+//            }
         }
-        .sheet(item: $router.sheet) { sheetPath in
-            RouterRootView {
-                sheetPath.associatedView
-            }
-        }
+//        .sheet(item: $router.sheet) { sheetPath in
+//            RouterRootView {
+//                sheetPath.associatedView
+//            }
+//        }
     }
 }
 

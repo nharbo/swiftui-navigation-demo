@@ -1,20 +1,20 @@
 //
-//  View+Routing.swift
-//  NavigationDemo
+//  File.swift
+//  
 //
-//  Created by Nicolai Harbo on 09/10/2023.
+//  Created by Nicolai Harbo on 15/01/2024.
 //
 
 import SwiftUI
 
 extension View {
-    func setupRouter() -> some View {
-        navigationDestination(for: MyNavigationPath.self) { path in
+    func setupRouter<Navigatable: MyNavigationPath>(navigatable: Navigatable) -> some View {
+        navigationDestination(for: Navigatable.self) { path in
             path.associatedView
         }
     }
     
-    func sheetWithNavigationStack(item: Binding<MyNavigationPath?>) -> some View {
-        modifier(SheetWithNavigationStackModifier(item: item))
-    }
+//    func sheetWithNavigationStack<Navigatable: MyNavigationPath>(item: Binding<Navigatable?>) -> some View {
+//        modifier(SheetWithNavigationStackModifier(item: item))
+//    }
 }

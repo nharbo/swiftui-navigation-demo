@@ -9,18 +9,18 @@ import SwiftUI
 import Models
 
 public final class Router: ObservableObject {
-    @Published public var navigationPath: [MyNavigationPath] = []
-    @Published public var sheet: MyNavigationPath?
+    @Published public var navigationPath: [NavigationPathType] = []
+    @Published public var sheet: (any MyNavigationPath)?
 }
 
 // MARK: - Navigation
 
 extension Router {
-    public func navigate(to path: MyNavigationPath) {
-        navigationPath.append(path)
+    public func navigate(to path: any MyNavigationPath) {
+        navigationPath.append(path.navigationPathType)
     }
     
-    public func present(sheet: MyNavigationPath) {
+    public func present(sheet: any MyNavigationPath) {
         self.sheet = sheet
     }
     
@@ -30,35 +30,5 @@ extension Router {
     
     public func popToRoot() {
         navigationPath.removeAll()
-    }
-}
-
-public enum MyNavigationPath: Hashable, Identifiable {
-    case homeView
-    case profileView
-    case personDetail(Person)
-    case searchView
-    case emptyView
-    
-    public var id: String { String(reflecting: self) }
-    
-    @ViewBuilder
-    public var associatedView: some View {
-        switch self {
-        case .homeView:
-//            HomeView()
-            EmptyView()
-        case .profileView:
-//            ProfileView()
-            EmptyView()
-        case let .personDetail(person):
-//            PersonDetailView(person: person)
-            EmptyView()
-        case .searchView:
-//            SearchView()
-            EmptyView()
-        case .emptyView:
-            EmptyView()
-        }
     }
 }

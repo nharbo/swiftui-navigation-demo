@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "navigation-bridge",
+    platforms: [.iOS(.v16)],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
@@ -13,6 +14,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../models"),
+        .package(path: "../navigation"),
         .package(path: "../packageOne"),
         .package(path: "../packageTwo")
     ],
@@ -23,6 +25,7 @@ let package = Package(
             name: "NavigationBridge",
             dependencies: [
                 .product(name: "Models", package: "models"),
+                .product(name: "Navigation", package: "navigation"),
                 .product(name: "PackageOne", package: "packageOne"),
                 .product(name: "PackageTwo", package: "packageTwo")
             ]

@@ -17,17 +17,17 @@ public struct HomeView: View {
         VStack {
             Text("Home")
             Button("Go to search") {
-                router.navigate(to: .searchView)
+                router.navigate(to: NavigationPath(.searchView))
             }
-            Button("Go to search as sheet") {
-                router.present(sheet: .searchView)
-            }
+//            Button("Go to search as sheet") {
+//                router.present(sheet: .searchView)
+//            }
         }
-        .sheet(item: $router.sheet) { sheetPath in
-            RouterRootView {
-                sheetPath.associatedView
-            }
-        }
+//        .sheet(item: $router.sheet) { sheetPath in
+//            RouterRootView {
+//                sheetPath.associatedView
+//            }
+//        }
     }
 }
 

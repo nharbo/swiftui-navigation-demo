@@ -15,6 +15,7 @@
 		100CE4F82AD0A7D000B15748 /* NavigationDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE4F72AD0A7D000B15748 /* NavigationDemoUITests.swift */; };
 		100CE4FA2AD0A7D000B15748 /* NavigationDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100CE4F92AD0A7D000B15748 /* NavigationDemoUITestsLaunchTests.swift */; };
 		100D31AF2B516310002652E9 /* PackageOne in Frameworks */ = {isa = PBXBuildFile; productRef = 100D31AE2B516310002652E9 /* PackageOne */; };
+		103256992B5584EF00325262 /* NavigationPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103256982B5584EF00325262 /* NavigationPath.swift */; };
 		10874A892B516583008E80C1 /* PackageTwo in Frameworks */ = {isa = PBXBuildFile; productRef = 10874A882B516583008E80C1 /* PackageTwo */; };
 		10874A8B2B5165EA008E80C1 /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = 10874A8A2B5165EA008E80C1 /* Models */; };
 		10874A8D2B5165F8008E80C1 /* Navigation in Frameworks */ = {isa = PBXBuildFile; productRef = 10874A8C2B5165F8008E80C1 /* Navigation */; };
@@ -52,6 +53,7 @@
 		100D31A42B515D53002652E9 /* models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = models; sourceTree = "<group>"; };
 		100D31A62B515F0E002652E9 /* packageOne */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = packageOne; sourceTree = "<group>"; };
 		100D31A72B515F3C002652E9 /* packageTwo */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = packageTwo; sourceTree = "<group>"; };
+		103256982B5584EF00325262 /* NavigationPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPath.swift; sourceTree = "<group>"; };
 		10429C5D2B5181EF00BB1BF9 /* navigation-bridge */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "navigation-bridge"; sourceTree = "<group>"; };
 		10874A872B516423008E80C1 /* navigation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = navigation; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 		100CE4DA2AD0A7CC00B15748 /* NavigationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				103256982B5584EF00325262 /* NavigationPath.swift */,
 				100CE4DB2AD0A7CC00B15748 /* NavigationDemoApp.swift */,
 				100CE4DD2AD0A7CC00B15748 /* ContentView.swift */,
 				100CE4DF2AD0A7CF00B15748 /* Assets.xcassets */,
@@ -292,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				100CE4DE2AD0A7CC00B15748 /* ContentView.swift in Sources */,
+				103256992B5584EF00325262 /* NavigationPath.swift in Sources */,
 				100CE4DC2AD0A7CC00B15748 /* NavigationDemoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

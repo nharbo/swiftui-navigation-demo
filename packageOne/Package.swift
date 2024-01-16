@@ -15,6 +15,7 @@ let package = Package(
     dependencies: [
         .package(path: "../models"),
         .package(path: "../navigation"),
+        .package(path: "../packageTwo"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -23,7 +24,8 @@ let package = Package(
             name: "PackageOne",
             dependencies: [
                 .product(name: "Models", package: "models"),
-                .product(name: "Navigation", package: "navigation")
+                .product(name: "Navigation", package: "navigation"),
+                .product(name: "PackageTwo", package: "packageTwo")
             ]
         )
     ]

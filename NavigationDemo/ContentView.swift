@@ -11,10 +11,11 @@ import PackageOne
 import PackageTwo
 
 struct ContentView: View {
+    
     var body: some View {
         TabView {
             // Home
-            RouterRootView {
+            RouterRootView(navigatable: NicoNavigationPath(.rootView)) {
                 HomeView()
             }
             .tabItem {
@@ -26,7 +27,7 @@ struct ContentView: View {
             }
             
             // Profile
-            RouterRootView {
+            RouterRootView(navigatable: NicoNavigationPath(.rootView)) {
                 ProfileView()
             }
             .tabItem {
